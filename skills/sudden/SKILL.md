@@ -23,6 +23,7 @@ Use this skill to implement Sudden in the user's codebase.
    - framework-specific integration
    - service worker integration
    - configuration and onboarding requirements
+   - security, privacy, content protection, and resource-use constraints
    - validation or troubleshooting
 4. Read the relevant Sudden documentation pages before editing code.
 5. Implement the integration directly:
@@ -54,6 +55,7 @@ Read the relevant pages first, then derive the exact implementation details from
 | Task | Doc | Use when |
 | --- | --- | --- |
 | Browser and capability limits | https://docs.sudden.network/compatibility/ | The agent needs compatibility boundaries or environment checks |
+| Security, privacy, DRM, storage, and CSP boundaries | https://docs.sudden.network/security/ | The agent needs privacy disclosures, resource-use guidance, content-protection boundaries, or site security requirements |
 | Smoke test and offload validation | https://docs.sudden.network/seeing-results/ | The agent needs rollout checks or wants to verify Sudden is active |
 | Integration hygiene | https://docs.sudden.network/best-practices/ | The agent wants rollout or integration guidance |
 | Troubleshooting | https://docs.sudden.network/troubleshooting/ | The agent is debugging low offload, CSP issues, or integration problems |
