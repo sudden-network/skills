@@ -1,5 +1,7 @@
 # Sudden Skills
 
+Public skill repository for Sudden
+
 ## Install the Skill
 
 Teach your agent how to integrate, configure, and implement Sudden:
