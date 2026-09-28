@@ -9,36 +9,37 @@ Use this skill to implement Sudden in the user's codebase.
 
 ## Workflow
 
-1. Inspect the codebase before changing anything:
+1. Open the [Sudden documentation sitemap](https://docs.sudden.network/sitemap.xml) to discover the current documentation set and identify the pages likely to be relevant.
+2. Inspect the codebase before changing anything:
    - What framework or runtime does the app use?
    - Where is the app entry point or top-level layout?
    - Where does video playback happen?
    - Does the app already use a service worker?
    - Where should Sudden configuration live in this project?
-2. Identify any Sudden-specific values or onboarding inputs that the integration will likely need.
+3. Identify any Sudden-specific values or onboarding inputs that the integration will likely need.
    - Check whether they already exist in config, env, or project secrets.
    - If they are missing, tell the user early which values are needed or likely needed.
-3. Choose the relevant documentation path:
+4. Choose the relevant documentation path from the sitemap, using the documentation map below as a curated starting point:
    - broad setup
    - framework-specific integration
    - service worker integration
    - configuration and onboarding requirements
    - security, privacy, content protection, and resource-use constraints
    - validation or troubleshooting
-4. Read the relevant Sudden documentation pages before editing code.
-5. Implement the integration directly:
+5. Read the relevant Sudden documentation pages before editing code.
+6. Implement the integration directly:
    - Read the exact documentation pages needed before editing code.
    - Use the current package names, API names, config fields, and integration steps from the docs.
    - Reuse the project's existing config and env conventions instead of inventing a new pattern.
    - If a required value is still unavailable, wire the integration with a clear placeholder or env hook and call that out to the user.
-6. Verify the result:
+7. Verify the result:
    - The implementation follows the documented integration path consistently.
    - Build, lint, and tests still pass when available.
    - If browser testing is available, use the documented smoke-test or validation steps.
 
 ## Documentation Map
 
-Read the relevant pages first, then derive the exact implementation details from those pages.
+Use the [Sudden documentation sitemap](https://docs.sudden.network/sitemap.xml) to discover the current set of pages. The routes below are curated starting points; read the relevant pages, then derive the exact implementation details from them.
 
 ### Primary integration pages
 
