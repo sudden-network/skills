@@ -65,7 +65,6 @@ Use the [Sudden documentation sitemap](https://docs.sudden.network/sitemap.xml) 
 ## Guardrails
 
 - Treat the documentation as the source of truth for package names, function names, props, config fields, and supported capabilities.
-- Confirm target playlists are HLS video on demand with a valid, positive `#EXTINF` duration before every media segment URI. When this requirement is not met, preserve the existing CDN delivery path.
 - Do not invent onboarding values or deployment-specific credentials.
 - If a required Sudden value is missing, tell the user exactly what is missing, then integrate as far as possible with a clear placeholder or env hook if the value is still unavailable.
 - Keep the user's player and delivery path unchanged outside the Sudden integration itself.
