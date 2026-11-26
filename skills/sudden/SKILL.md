@@ -69,6 +69,7 @@ Use the [Sudden documentation sitemap](https://docs.sudden.network/sitemap.xml) 
 - If a required Sudden value is missing, tell the user exactly what is missing, then integrate as far as possible with a clear placeholder or env hook if the value is still unavailable.
 - Keep the user's player and delivery path unchanged outside the Sudden integration itself.
 - Prefer the smallest viable code change near the app root or entry point.
+- Use only the documented production Sudden SDK and services in every customer-managed environment, including previews and test sites; do not introduce undocumented endpoints or environment details.
 
 ## External Prerequisites
 
