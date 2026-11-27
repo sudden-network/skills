@@ -73,6 +73,7 @@ Use the [Sudden documentation sitemap](https://docs.sudden.network/sitemap.xml) 
 - For Playback Analysis only, use the standalone script path; do not initialize the full Sudden client or install a service worker unless the user also asks for peer-assisted delivery.
 - Keep the user's player and delivery path unchanged outside the Sudden integration itself.
 - Prefer the smallest viable code change near the app root or entry point.
+- Use only the documented production Sudden SDK and services in every customer-managed environment, including previews and test sites; do not introduce undocumented endpoints or environment details.
 
 ## External Prerequisites
 
