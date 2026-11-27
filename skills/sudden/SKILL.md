@@ -1,16 +1,17 @@
 ---
 name: sudden
-description: Use when the user wants Sudden integrated, configured, validated, or troubleshot in their codebase. This skill equips the agent to read the relevant Sudden docs, choose the right integration path for the codebase, implement it directly, and verify it.
+description: Use when the user wants Sudden integrated, configured, validated, or troubleshot in their codebase, or wants to analyze live or on-demand playback with Sudden's standalone Playback Analysis script. This skill equips the agent to read the relevant Sudden docs, choose the right integration path for the codebase, implement it directly, and verify it.
 ---
 
 # Sudden
 
-Use this skill to implement Sudden in the user's codebase.
+Use this skill to implement Sudden or its standalone Playback Analysis in the user's codebase.
 
 ## Workflow
 
 1. Open the [Sudden documentation sitemap](https://docs.sudden.network/sitemap.xml) to discover the current documentation set and identify the pages likely to be relevant.
 2. Inspect the codebase before changing anything:
+   - Is the request for standalone Playback Analysis or full Sudden peer-assisted delivery?
    - What framework or runtime does the app use?
    - Where is the app entry point or top-level layout?
    - Where does video playback happen?
@@ -20,6 +21,7 @@ Use this skill to implement Sudden in the user's codebase.
    - Check whether they already exist in config, env, or project secrets.
    - If they are missing, tell the user early which values are needed or likely needed.
 4. Choose the relevant documentation path from the sitemap, using the documentation map below as a curated starting point:
+   - standalone Playback Analysis for live or on-demand video
    - broad setup
    - framework-specific integration
    - service worker integration
@@ -45,6 +47,7 @@ Use the [Sudden documentation sitemap](https://docs.sudden.network/sitemap.xml) 
 
 | Task | Primary doc | Also read |
 | --- | --- | --- |
+| Standalone Playback Analysis for live or on-demand video | https://docs.sudden.network/playback-analysis/ | Client ID; Security and privacy |
 | First integration or broad setup | https://docs.sudden.network/getting-started/ | Framework-specific page; Service worker |
 | JavaScript or TypeScript integration | https://docs.sudden.network/javascript-client/ | Service worker |
 | React integration | https://docs.sudden.network/react-client/ | Service worker |
@@ -67,6 +70,7 @@ Use the [Sudden documentation sitemap](https://docs.sudden.network/sitemap.xml) 
 - Treat the documentation as the source of truth for package names, function names, props, config fields, and supported capabilities.
 - Do not invent onboarding values or deployment-specific credentials.
 - If a required Sudden value is missing, tell the user exactly what is missing, then integrate as far as possible with a clear placeholder or env hook if the value is still unavailable.
+- For Playback Analysis only, use the standalone script path; do not initialize the full Sudden client or install a service worker unless the user also asks for peer-assisted delivery.
 - Keep the user's player and delivery path unchanged outside the Sudden integration itself.
 - Prefer the smallest viable code change near the app root or entry point.
 
